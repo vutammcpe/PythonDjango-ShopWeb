@@ -14,6 +14,6 @@
 
 
 
-4       <code> python manage.py runserver </code>
+4.      <code> python manage.py runserver </code>
 
 
