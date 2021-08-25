@@ -10,7 +10,7 @@
 
 
 
-3.      <code> pip install -r requirements.txt 
+3.       pip install -r requirements.txt 
 
 
 
