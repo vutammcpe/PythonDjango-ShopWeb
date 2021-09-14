@@ -3,6 +3,8 @@ from django.urls import path
 from django.views.generic.base import View
 from.views import  CheckoutView, HomeView, ItemDetailView
 
+
+
 app_name = 'shop'
 
 urlpatterns = [
@@ -10,3 +12,5 @@ urlpatterns = [
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('product/<slug>', ItemDetailView.as_view(), name='product'),
 ]
+
+    

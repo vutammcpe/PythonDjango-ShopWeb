@@ -59,9 +59,15 @@
         </div>
         {% endfor %}
     {% endif %}
-    </div>
+    
 
     {% block content %}
+    <div class="view overlay">
+                <img src=" {{item.image.url}}" class="card-img-top" alt="">
+                
+              </div>
+  
+    <img src="{{item.image.url}}" width=330px, height= 382px/>
     {% endblock content %}
 
     
