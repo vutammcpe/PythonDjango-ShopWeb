@@ -8,13 +8,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Trang bán hàng trực tuyến của TAM_Shop</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" >
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/mdb.css' %}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
   <style type="text/css">
     html,
     body,
@@ -50,6 +51,7 @@
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    
     <div class="container">
 
       <!-- Brand -->
@@ -67,18 +69,27 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <!-- Left -->
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" id="navbaritem">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="http://127.0.0.1:8000/">Home
+            <a class="nav-link waves-effect" href="http://127.0.0.1:8000/">Trang chủ
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="http://127.0.0.1:8000/checkout/" target="_self">Checkout</a>
+            <a class="nav-link waves-effect" href="http://127.0.0.1:8000/checkout/" target="_self">Thanh toán</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href=" "
+              target="_self">Sản phẩm <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="http://127.0.0.1:8000/product/"
-              target="_self">Products</a>
+            <a class="nav-link waves-effect" href=" "
+              target="_self">Tin tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href=" "
+              target="_self">Liên hệ</a>
           </li>
         </ul>
 
@@ -126,6 +137,7 @@
 
       <!--First slide-->
       <div class="carousel-item active">
+      
         <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%282%29.jpg'); background-repeat: no-repeat; background-size: cover;">
 
           <!-- Mask & flexbox options-->
@@ -201,10 +213,7 @@
 
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-
         <!-- Navbar brand -->
-        <span class="navbar-brand">Categories:</span>
-
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
           aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -213,30 +222,34 @@
 
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
-
+          
           <!-- Links -->
-          <ul class="navbar-nav mr-auto">
+         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">All
+              <a class="nav-link" href="#">Áo khoác
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
+              <a class="nav-link" href="#">Áo thun</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
+              <a class="nav-link" href="#">Quần</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
+              <a class="nav-link" href="#">Phụ Kiện</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mũ</a>
             </li>
 
           </ul>
-          <!-- Links -->
+          <!--Links --> 
 
           <form class="form-inline">
             <div class="md-form my-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-light my-sn-0" type="submit">Search</button>
             </div>
           </form>
         </div>
@@ -258,13 +271,14 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top"
+                <img src=" {{item.image.url}}" width=330px, height= 382px class=""
                   alt="">
                 <a href="{{ item.get_absolute_url }}">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <!--Card image-->
+              <!--Card image--> 
+
 
               <!--Card content-->
               <div class="card-body text-center">

@@ -1,3 +1,5 @@
+
+  
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -3053,7 +3055,9 @@ input[type="button"].btn-block {
 .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-
+.nav-justified{
+  background-color: blue;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -10035,4 +10039,10 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.nav-justified
+{
+  width: 100%;
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */

@@ -27,6 +27,7 @@ class Item(models.Model):
     label = models.CharField(choices=LABEL_CHOICES, max_length=1)
     slug = models.SlugField()
     description = models.TextField()
+    image = models.ImageField(null=True)
 
     def __str__(self):
         return self.title
@@ -34,7 +35,7 @@ class Item(models.Model):
         return reverse("shop:product", kwargs={
             'slug': self.slug
         })
-    
+     
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
@@ -52,4 +53,4 @@ class Order(models.Model):
 
 
     def __str__(self):
-        return self.user.username
+        return self.user.username   
